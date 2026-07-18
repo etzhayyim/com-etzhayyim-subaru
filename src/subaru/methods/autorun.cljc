@@ -39,12 +39,8 @@
     (persistent! out)))
 
 #?(:clj
-   (def ^:private here-dir
-     (-> *file* io/file .getCanonicalFile .getParentFile .getParentFile)))
-
-#?(:clj
    (defn default-seed-path []
-     (str (io/file here-dir "data" "seed-constellation.kotoba.edn"))))
+     (str (io/file "data" "seed-constellation.kotoba.edn"))))
 
 #?(:clj
    (defn ground-datoms
@@ -76,7 +72,7 @@
 #?(:clj
    (defn -main [& args]
      (let [log-path (or (first args)
-                        (str (io/file here-dir "data" "persisted" "subaru.constellation.kotoba.edn")))
+                         (str (io/file "data" "persisted" "subaru.constellation.kotoba.edn")))
            r (beat {:tx-id "subaru-beat-manual" :as-of "manual" :log-path log-path})]
        (println (str "constellation ledger head=" (:head r)
                      " datoms=" (:count r)

@@ -16,7 +16,7 @@ operator-DID** action (G8); the actor component routes no traffic and operates n
 Pre-req: PR #1857 (R0–R2) merged. Then, on an operator workstation:
 
 ```bash
-cd 20-actors/subaru
+cd com-etzhayyim-subaru
 componentize-py -w subaru-actor componentize actor -o dist/subaru.wasm
 ipfs add --cid-version=1 --raw-leaves dist/subaru.wasm > dist/subaru.cid
 node ../tsumugi/wasm/loader/verify.mjs dist/subaru.wasm   # headless CID re-verify

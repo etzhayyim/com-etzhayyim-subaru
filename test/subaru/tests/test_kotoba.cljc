@@ -1,6 +1,5 @@
-#!/usr/bin/env bb
 ;; subaru 昴 — constellation-ledger persistence + heartbeat tests.
-;; Run:  bb --classpath 20-actors 20-actors/subaru/tests/test_kotoba.cljc
+;; Run with `bb test`.
 (ns subaru.tests.test-kotoba
   (:require [subaru.methods.kotoba :as k]
             [subaru.methods.autorun :as auto]

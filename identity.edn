@@ -1,0 +1,4 @@
+{:identity/id "subaru" :identity/glyph "昴"
+ :identity/did "did:web:subaru.etzhayyim.com"
+ :identity/wire-document "wire/identity/did.json"
+ :identity/wire-profile "wire/identity/profile.json"}
